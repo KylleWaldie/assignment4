@@ -42,5 +42,101 @@ output:
   +42
 00042
 ```
+## Float Formating
+### C99 printf
+```
+#include <stdio.h>
 
-Quote - https://www.goodreads.com/quotes/7630401-code-formatting-is-important-it-is-too-important-to-ignore?utm_source=chatgpt.com
+int main()
+{
+    float f = 3.14159;
+    printf("%8.2f\n", f);   // width 8, 2 decimals
+    printf("%08.2f\n", f);  // pad with zeros
+    printf("%e\n", f);      // scientific notation
+    return 0;
+}
+
+Output:
+    3.14
+00003.14
+3.141590e+00
+```
+## Python
+```
+old-style % formating
+
+f = 3.14159
+print("%8.2f" % f)
+print("%08.2f" % f)
+print("%e" % f)
+
+F-strings
+f = 3.14159
+print(f"{f:8.2f}")
+print(f"{f:08.2f}")
+print(f"{f:e}")
+
+Output:
+    3.14
+00003.14
+3.141590e+00
+
+```
+
+## String Format
+### C99 printf
+```
+#include <stdio.h>
+
+int main() {
+    char *s = "Hello";
+    printf("%-10s!\n", s); // left-aligned, width 10
+    printf("%10s!\n", s); // right-aligned, width 10
+    return 0;
+}
+
+Output:
+
+Hello     !
+     Hello!
+```
+## Python
+```
+old-style % formating
+
+s = "Hello"
+print("%-10s!" % s)
+print("%10s!" % s)
+
+F-strings
+s = "Hello"
+print(f"{s:<10}!")
+print(f"{s:>10}!")
+print(f"{s:^10}!")
+
+Output:
+Hello     !
+     Hello!
+  Hello   !
+```
+------------------------------------------------------------
+| Type | Example Code (C) | Example Code (python) | Output
+|----------|:--------:|---------:|-------:|
+| int  | printf("%5d", 42);  | "%5d" % 42  | 42
+| int  | printf("%+5d", 42);  | "%+5d" % 42  |+42
+| int  | printf("%05d", 42);  | "%05d" % 42  | 00042
+| float  | printf("%8.2f", 3.14159);  | "%8.2f" % 3.14159  | 3.14
+| float  | printf("%e", 3.14159);  | "%e" % 3.14159  | 3.141590e+00
+| string  | printf("%-10s!", "Hello");  | "%-10s" % "Hello"  | Hello !
+| string  | printf("%10s!", "Hello");  | "%10s" % "Hello"  | Hello!
+
+-----
+
+[Python f-strings]https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+
+[C99 printf reference]https://en.cppreference.com/w/c/io/fprintf
+
+[Python old-style % formatting]https://docs.python.org/3/library/stdtypes.html#printf-style-string-
+formatting
+
+![Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
