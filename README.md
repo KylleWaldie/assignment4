@@ -61,7 +61,7 @@ Output:
 00003.14
 3.141590e+00
 ```
-## Python
+### Python
 ```
 old-style % formating
 
@@ -100,7 +100,7 @@ Output:
 Hello     !
      Hello!
 ```
-## Python
+### Python
 ```
 old-style % formating
 
