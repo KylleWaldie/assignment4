@@ -136,7 +136,6 @@ Hello     !
 
 [C99 printf reference]https://en.cppreference.com/w/c/io/fprintf
 
-[Python old-style % formatting]https://docs.python.org/3/library/stdtypes.html#printf-style-string-
-formatting
+[Python old-style % formatting]https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting
 
 ![Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
